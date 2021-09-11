@@ -4,7 +4,20 @@ import 'package:whatsapp_clone/pages/home_page.dart';
 
 void main() {
   runApp(GetMaterialApp(
-    home: MyApp(),
+    theme: ThemeData(
+      fontFamily: 'OpenSans',
+      primaryColor: Color(0xFF075E54),
+      accentColor: Color(0xFF128C7E),
+      primarySwatch: Colors.blue,
+      textTheme: TextTheme(
+        subtitle2: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+      ),
+    ),
+    initialRoute: '/',
+    getPages: [
+      GetPage(name: '/', page: () => HomeScreen()),
+    ],
+    // home: MyApp(),
   ));
 }
 
@@ -14,11 +27,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primaryColor: Color(0xFF075E54),
-        accentColor: Color(0xFF128C7E),
-        primarySwatch: Colors.blue,
-      ),
       home: HomeScreen(),
     );
   }
