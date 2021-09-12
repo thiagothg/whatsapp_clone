@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:whatsapp_clone/pages/home_page.dart';
+import 'package:whatsapp_clone/pages/tabs/chat/group/create_group_page.dart';
+import 'package:whatsapp_clone/pages/tabs/chat/select_contact_page.dart';
 
 void main() {
   runApp(GetMaterialApp(
@@ -9,6 +11,7 @@ void main() {
       primaryColor: Color(0xFF075E54),
       accentColor: Color(0xFF128C7E),
       primarySwatch: Colors.blue,
+      appBarTheme: AppBarTheme(centerTitle: false, iconTheme: IconThemeData()),
       textTheme: TextTheme(
         subtitle2: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
       ),
@@ -16,6 +19,8 @@ void main() {
     initialRoute: '/',
     getPages: [
       GetPage(name: '/', page: () => HomeScreen()),
+      GetPage(name: '/select-contact', page: () => SelectContactpage()),
+      GetPage(name: '/create-group', page: () => CreateGroupPage()),
     ],
     // home: MyApp(),
   ));
