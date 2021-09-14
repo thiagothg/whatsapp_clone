@@ -4,14 +4,18 @@ import 'package:whatsapp_clone/pages/home_page.dart';
 import 'package:whatsapp_clone/pages/tabs/chat/group/create_group_page.dart';
 import 'package:whatsapp_clone/pages/tabs/chat/select_contact_page.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
   runApp(GetMaterialApp(
     theme: ThemeData(
       fontFamily: 'OpenSans',
       primaryColor: Color(0xFF075E54),
       accentColor: Color(0xFF128C7E),
       primarySwatch: Colors.blue,
-      appBarTheme: AppBarTheme(centerTitle: false, iconTheme: IconThemeData()),
+      appBarTheme: AppBarTheme(
+          centerTitle: false, iconTheme: IconThemeData(color: Colors.white)),
+      iconTheme: IconThemeData(color: Colors.white),
       textTheme: TextTheme(
         subtitle2: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
       ),

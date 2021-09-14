@@ -29,6 +29,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   get: ^4.3.8
   emoji_picker_flutter: ^1.0.7
+  camera: ^0.9.2+2
+  video_player: ^2.2.0
 
 dev_dependencies:
   flutter_test:

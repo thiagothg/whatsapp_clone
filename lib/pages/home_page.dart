@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'tabs/camera/camera_tab_page.dart';
 import 'tabs/chat/chat_page.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -25,9 +26,14 @@ class _HomeScreenState extends State<HomeScreen>
       appBar: AppBar(
         title: Text('Whatsapp Clone'),
         actions: [
-          IconButton(onPressed: () {}, icon: Icon(Icons.search)),
+          IconButton(
+              onPressed: () {},
+              icon: Icon(
+                Icons.search,
+                color: Colors.white,
+              )),
           PopupMenuButton(
-              icon: Icon(Icons.more_vert),
+              icon: Icon(Icons.more_vert, color: Colors.white),
               onSelected: (val) {
                 print(val);
               },
@@ -77,7 +83,7 @@ class _HomeScreenState extends State<HomeScreen>
       ),
       body: TabBarView(
         controller: tabController,
-        children: [Text('camera'), ChatPage(), Text('status'), Text('calls')],
+        children: [CameraTabPage(), ChatPage(), Text('status'), Text('calls')],
       ),
     );
   }
